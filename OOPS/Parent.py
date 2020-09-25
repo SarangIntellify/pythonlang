@@ -24,7 +24,7 @@ class Others:
         def featureFive(self):
             print("Feature of others")
 
-#if inherited class have same method name then class you write first inside parenthesis, that class method will be considered
+#if inherited class have same method name then class you write first inside parenthesis, that class method will be considered => left to right
 class GrandParent(Others, SmallChild): #multiple inheritance
 
         def featureSix(self):
