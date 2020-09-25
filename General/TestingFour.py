@@ -6,9 +6,9 @@ class TestingFour:
         print("Constructor called")
         self.name = name
     
-    def instanceFunction(self, classref):
+    def instanceFunction(self):
         print(self.name)
-        print(classref.classV) # can access class variable inside instance function
+        print(TestingFour.classV) # can access class variable inside instance function
 
     @classmethod
     def classFunction(self, cls):
@@ -16,11 +16,11 @@ class TestingFour:
        # print("Instance variable ",  self.name)  cannot use instance or object variable inside the class methods
    
     @staticmethod
-    def staticFunction(self, cls):
+    def staticFunction(self): # or can ad class reference)
         print(self.name) #can use instance or object variable inside static function
-        print(cls.classV) #can use class variable inside static function
+        print(TestingFour.classV) #can use class variable inside static function
 
     
 t = TestingFour("Sarang")
-t.staticFunction(t, TestingFour) 
-t.instanceFunction(TestingFour)  
+t.staticFunction(t) 
+t.instanceFunction()  
