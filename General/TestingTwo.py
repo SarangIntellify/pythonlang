@@ -1,6 +1,6 @@
 class TestingTwo:
           
-        college = "SOCET" #static variable
+        college = "SOCET" #class variable
 
         def __init__(self, name, age, animal):
             print("Constructor called")
