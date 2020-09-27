@@ -84,13 +84,13 @@ s = {3*x for x in range(10) if x > 4}
 
 #Dictionaries, key value pairs
 d = {"a":1, "b": 2}
-d = dict([("a":1, "b": 2)])
-d = dict ("a":1, "b": 2) 
+d = dict([("a",1), ("b", 2)])
+d = dict (a=1, b= 2) 
 
 # basic operation in dict
 d["c"] = 3 #adding or chaning item
 del d["a"] # remove item from dict
-lem(d) #length of dict
+len(d) #length of dict
 d.clear() #remove all items from list
 
 d = {}
@@ -98,7 +98,12 @@ d.keys() #returning list of keys
 d.values() # returning list of values
 d.items() # returning list of key-value pairs from dict.
 
+d.get("a", "not found") # if key doesn't exist in dict it will return message not found
 
+#merging
+keys = ["a", "b"]
+values = [1,2]
+data = dict(zip(keys, values)) #{a:1, b:2}
 #iterating dict
 #Entries in dict is in ranoom order.
 
@@ -107,5 +112,6 @@ for key in d:
     
 for k,v in d.items():
     print(k,v)
+    
 
 
