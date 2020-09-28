@@ -6,3 +6,6 @@ BASE = "http://127.0.0.1:5000/"
 #sending the get request to base url + helloworld
 response = requests.put(BASE + "video/1", {"name":"sarang","views":30,"likes":10}) #passing request json for testing 
 print(response.json())
+input() #press enter to execute this line.
+response = requests.get(BASE + "video/1") 
+print(response.json())
